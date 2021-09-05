@@ -85,6 +85,19 @@ M.get_color = function(name)
         blue = "#A4FFFF",
         red = "#FF5555",
       }
+    elseif string.find(vim.g.colors_name, "base16") then
+      colors = {
+        bg = vim.g.terminal_color_0,
+        fg = vim.g.terminal_color_5,
+        fg = vim.g.terminal_color_20,
+        yellow = vim.g.terminal_color_3,
+        cyan = vim.g.terminal_color_6,
+        green = vim.g.terminal_color_2,
+        green = vim.g.terminal_color_7,
+        magenta = vim.g.terminal_color_5,
+        blue = vim.g.terminal_color_4,
+        red = vim.g.terminal_color_1,
+      }
     end
     return colors[name]
   end
