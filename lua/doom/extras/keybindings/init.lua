@@ -1129,7 +1129,3 @@ utils.map("n", "<leader>m", "<cmd>w<cr>", opts, "Save", "save_right", "Save m")
 
 -- man pages
 utils.map("n", "<leader>h", ":Man ", { silent = false }, "Man page", "man_page", "Man page")
-
--- aharris
-utils.map("i", "fd", "<ESC>", opts, "Editor", "exit_insert_fd", "Exit insert mode")
-utils.map("n", "<leader>fs", "<cmd>w<cr>", opts, "Save", "save_fs", "Save fs")

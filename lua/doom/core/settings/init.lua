@@ -138,10 +138,6 @@ M.load_default_options = function()
   vim.opt.softtabstop = config.doom.indent
   vim.opt.colorcolumn = tostring(config.doom.max_columns)
   vim.opt.conceallevel = config.doom.conceallevel
-
-  if vim.fn.filereadable('~/.vimrc_background') then
-      vim.cmd('  source ~/.vimrc_background')
-  end
 end
 
 -- Custom Doom Nvim commands
