@@ -16,8 +16,17 @@ local opts = { silent = true }
 
 -- aharris
 utils.map("i", "fd", "<ESC>", opts, "Editor", "exit_insert_fd", "Exit insert mode")
-utils.map("i", "ff", "<ESC>", opts, "Editor", "exit_insert_fd", "Exit insert mode")
 utils.map("n", "<leader>fs", "<cmd>w<cr>", opts, "Save", "save_fs", "Save fs")
+
+utils.map(
+  "n",
+  "<leader>bb",
+  "<cmd>Telescope buffers show_all_buffers=true<CR>",
+  opts,
+  "Movement",
+  "switch_buffers_bb",
+  "Switch buffers"
+)
 if vim.fn.filereadable('~/.vimrc_background') then
     vim.cmd('  source ~/.vimrc_background')
 end
