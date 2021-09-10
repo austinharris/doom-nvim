@@ -16,6 +16,8 @@ local opts = { silent = true }
 
 -- aharris
 utils.map("i", "fd", "<ESC>", opts, "Editor", "exit_insert_fd", "Exit insert mode")
+utils.map("n", "<C-g>", "<ESC>", opts, "Editor", "exit_insert_ctrlg_normal", "Exit")
+utils.map("i", "<C-g>", "<ESC>", opts, "Editor", "exit_insert_ctrlg_insert", "Exit")
 utils.map("n", "<leader>fs", "<cmd>w<cr>", opts, "Save", "save_fs", "Save fs")
 
 utils.map(
