@@ -9,6 +9,7 @@ return function()
   require'lspinstall/servers'.ccls = vim.tbl_extend('error', config, {
     install_script = [[
     ]],
+    uninstall_script = nil -- can be omitted
   })
 
   local lua_lsp = require("lua-dev").setup({
