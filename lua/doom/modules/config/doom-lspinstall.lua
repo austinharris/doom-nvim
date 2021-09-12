@@ -2,6 +2,15 @@ return function()
   local log = require("doom.extras.logging")
   local utils = require("doom.utils")
   local nvim_lsp = require("lspconfig")
+
+  -- add ccls
+  local config = require"lspinstall/util".extract_config("ccls")
+  config.default_config.cmd[1] = "ccls"
+  require'lspinstall/servers'.ccls = vim.tbl_extend('error', config, {
+    install_script = [[
+    ]],
+  })
+
   local lua_lsp = require("lua-dev").setup({
     lspconfig = {
       settings = {
