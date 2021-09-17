@@ -32,3 +32,6 @@ utils.map(
 if vim.fn.filereadable('~/.vimrc_background') then
     vim.cmd('  source ~/.vimrc_background')
 end
+
+-- My fancy fish makes some things behave weird/slow like treesitter
+vim.cmd('set shell=/bin/bash')
