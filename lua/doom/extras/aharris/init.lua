@@ -15,12 +15,12 @@ log.debug("Loading aharris module ...")
 local opts = { silent = true }
 
 -- aharris
-mapping.map("i", "fd", "<ESC>", opts, "Editor", "exit_insert_fd", "Exit insert mode")
-mapping.map("n", "<C-g>", "<ESC>", opts, "Editor", "exit_insert_ctrlg_normal", "Exit")
-mapping.map("i", "<C-g>", "<ESC>", opts, "Editor", "exit_insert_ctrlg_insert", "Exit")
-mapping.map("n", "<leader>fs", "<cmd>w<cr>", opts, "Save", "save_fs", "Save fs")
+mappings.map("i", "fd", "<ESC>", opts, "Editor", "exit_insert_fd", "Exit insert mode")
+mappings.map("n", "<C-g>", "<ESC>", opts, "Editor", "exit_insert_ctrlg_normal", "Exit")
+mappings.map("i", "<C-g>", "<ESC>", opts, "Editor", "exit_insert_ctrlg_insert", "Exit")
+mappings.map("n", "<leader>fs", "<cmd>w<cr>", opts, "Save", "save_fs", "Save fs")
 
-mapping.map(
+mappings.map(
   "n",
   "<leader>bb",
   "<cmd>Telescope buffers show_all_buffers=true<CR>",
