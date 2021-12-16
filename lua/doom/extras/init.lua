@@ -4,7 +4,7 @@
 
 require("doom.extras.logging").debug("Loading Doom extras ...")
 
-local extra_modules = { "keybindings" "aharris" }
+local extra_modules = { "keybindings", "aharris" }
 
 local disabled_autocommands = require("doom.core.config").config.doom.disable_autocommands
 if not disabled_autocommands then
