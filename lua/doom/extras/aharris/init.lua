@@ -4,8 +4,8 @@
 --              License: GPLv2                 --
 ---[[---------------------------------------]]---
 
-local utils = require("doom.utils")
 local log = require("doom.extras.logging")
+local mappings = require("doom.utils.mappings")
 -- local config = require("doom.core.config").load_config()
 -- local functions = require("doom.core.functions")
 
@@ -15,12 +15,12 @@ log.debug("Loading aharris module ...")
 local opts = { silent = true }
 
 -- aharris
-utils.map("i", "fd", "<ESC>", opts, "Editor", "exit_insert_fd", "Exit insert mode")
-utils.map("n", "<C-g>", "<ESC>", opts, "Editor", "exit_insert_ctrlg_normal", "Exit")
-utils.map("i", "<C-g>", "<ESC>", opts, "Editor", "exit_insert_ctrlg_insert", "Exit")
-utils.map("n", "<leader>fs", "<cmd>w<cr>", opts, "Save", "save_fs", "Save fs")
+mapping.map("i", "fd", "<ESC>", opts, "Editor", "exit_insert_fd", "Exit insert mode")
+mapping.map("n", "<C-g>", "<ESC>", opts, "Editor", "exit_insert_ctrlg_normal", "Exit")
+mapping.map("i", "<C-g>", "<ESC>", opts, "Editor", "exit_insert_ctrlg_insert", "Exit")
+mapping.map("n", "<leader>fs", "<cmd>w<cr>", opts, "Save", "save_fs", "Save fs")
 
-utils.map(
+mapping.map(
   "n",
   "<leader>bb",
   "<cmd>Telescope buffers show_all_buffers=true<CR>",
